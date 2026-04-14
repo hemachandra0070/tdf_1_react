@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 232, 191, 0.75), transparent 40%),
+    radial-gradient(circle at 90% 15%, rgba(180, 228, 223, 0.65), transparent 35%),
+    #f6f4ee;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .page-wrap {
+    @apply mx-auto w-[min(1150px,calc(100%-2rem))] py-16 md:py-20;
+  }
+
+  .kicker {
+    @apply inline-flex rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-ink/65;
+  }
+
+  .hero-title {
+    @apply mt-5 text-balance text-4xl leading-tight md:text-6xl;
+  }
+
+  .hero-copy {
+    @apply mt-5 max-w-2xl text-base leading-7 text-ink/70 md:text-lg;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-black/10 bg-white/80 p-6 shadow-panel backdrop-blur md:p-8;
+  }
+
+  .card-grid-3 {
+    @apply mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .card-grid-2 {
+    @apply mt-8 grid gap-5 md:grid-cols-2;
+  }
+
+  .card {
+    @apply rounded-3xl border border-black/10 bg-white/85 p-6 shadow-panel transition duration-300 hover:-translate-y-1 hover:border-black/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-canvas transition hover:-translate-y-0.5 hover:bg-ember;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-black/20 bg-white/50 px-5 py-2.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-white;
+  }
+
+  .nav-link {
+    @apply relative text-sm font-semibold text-ink/75 transition hover:text-ink;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 h-0.5 w-0 bg-ember transition-all duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.is-active::after {
+    @apply w-full;
+  }
+
+  .story-metric {
+    @apply rounded-2xl border border-black/10 bg-mist/55 p-4;
+  }
+}
