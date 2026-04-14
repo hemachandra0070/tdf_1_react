@@ -14,7 +14,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-black/10 bg-canvas/85 backdrop-blur-lg">
       <div className="mx-auto flex w-[min(1150px,calc(100%-2rem))] items-center justify-between gap-4 py-3">
         <Link href="/" className="shrink-0" aria-label="TheDigifac Home">
-          <Image src="/tdf_logo_1.png" alt="TheDigifac" width={170} height={62} priority />
+          <Image src="/tdf_logo_1.png" alt="TheDigifac" width={120} height={30} priority />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
